@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0f0f1e, #1a0033);
+    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: 900;
+    text-shadow: 0 0 20px #00ffff, 0 0 40px #ff0000;
+    animation: glow 2s infinite alternate;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #00ffff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 15px #ff0000;
+}
+
+.hero {
+    height: 80vh;
+    background: url('https://wallpapercave.com/wp/wp4056418.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-size: 5rem;
+    z-index: 2;
+    animation: pulse 3s infinite;
+}
+
+.content {
+    padding: 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: #111133;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #00ffff;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 0 30px #00ffff;
+    border-color: #ff0000;
+}
+
+footer {
+    background: #000;
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 2px solid #ff0000;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px #00ffff;
+    }
+
+    to {
+        text-shadow: 0 0 40px #ff0000;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+a.contenedor-enlace {
+    text-decoration: none;
+    color: aqua;
+}
+
+header.inicio{
+            height:100vh;
+            background:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.98)),
+                       url('https://wallpapercave.com/wp/wp13478921.jpg') center/cover no-repeat fixed;
+            display:flex;flex-direction:column;justify-content:center;align-items:center;
+            text-align:center;position:relative;
+        }

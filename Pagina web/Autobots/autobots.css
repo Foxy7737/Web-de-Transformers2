@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0f0f1e, #1a0033);
+    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid #ff0000;
+    box-shadow: 0 0 30px #ff0000;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: 900;
+    text-shadow: 0 0 20px #00ffff, 0 0 40px #ff0000;
+    animation: glow 2s infinite alternate;
+}
+
+nav a {
+    color: #00ffff;
+    margin: 0 25px;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+nav a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 15px #ff0000;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://wallpapercave.com/wp/wp4056418.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.hero h1 {
+    font-size: 6rem;
+    z-index: 2;
+    animation: pulse 4s infinite;
+}
+
+.gallery {
+    padding: 120px 50px 80px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-shadow: 0 0 20px #00ffff;
+}
+
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.char-card {
+    background: rgba(10, 10, 40, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #00ffff;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.char-card:hover {
+    transform: translateY(-20px) scale(1.05);
+    border-color: #ff0000;
+    box-shadow: 0 0 40px #ff0000;
+}
+
+.char-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.char-card:hover img {
+    transform: scale(1.1);
+}
+
+.info {
+    padding: 20px;
+}
+
+.info h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.info p {
+    margin: 10px 0 0;
+    font-size: 1.1rem;
+}
+
+.faction {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+footer {
+    background: #000;
+    padding: 40px;
+    text-align: center;
+    border-top: 3px solid #ff0000;
+    margin-top: 80px;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px #00ffff;
+    }
+
+    to {
+        text-shadow: 0 0 50px #ff0000;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
